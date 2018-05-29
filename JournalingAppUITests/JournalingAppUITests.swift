@@ -1,10 +1,4 @@
-//
-//  JournalingAppUITests.swift
-//  JournalingAppUITests
-//
-//  Created by learn on 5/28/18.
-//  Copyright © 2018 Wenyao. All rights reserved.
-//
+// Easier to do UI Tests by visual test
 
 import XCTest
 

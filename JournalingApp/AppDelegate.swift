@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  JournalingApp
-//
-//  Created by learn on 5/28/18.
-//  Copyright © 2018 Wenyao. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain

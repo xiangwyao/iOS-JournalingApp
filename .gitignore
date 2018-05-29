@@ -1,0 +1,8 @@
+
+.DS_Store
+.Trashes
+
+*.lock
+*.swp
+build
+
