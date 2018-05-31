@@ -10,6 +10,4 @@ class JournalCell: UITableViewCell {
   @IBOutlet weak var yearLabel: UILabel!
   
   @IBOutlet weak var previewImageViewWidth: NSLayoutConstraint!
-  
-
 }

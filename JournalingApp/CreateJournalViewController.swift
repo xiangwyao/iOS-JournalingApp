@@ -1,5 +1,6 @@
 import UIKit
 import RealmSwift
+import Spring
 
 class CreateJournalViewController: UIViewController {
   
@@ -127,7 +128,7 @@ extension CreateJournalViewController: UIImagePickerControllerDelegate, UINaviga
   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
     if let chosenImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
       images.append(chosenImage)
-      let imageView = UIImageView()
+      let imageView = SpringImageView()
       imageView.heightAnchor.constraint(equalToConstant: 70.0).isActive = true
       imageView.widthAnchor.constraint(equalToConstant: 70.0).isActive = true
       imageView.contentMode = .scaleAspectFill
@@ -136,6 +137,9 @@ extension CreateJournalViewController: UIImagePickerControllerDelegate, UINaviga
       stackView.addArrangedSubview(imageView)
       imagePicker.dismiss(animated: true) {
         // animation
+        imageView.animation = "pop"
+        imageView.duration = 2.0
+        imageView.animate()
       }
     }
   }

@@ -27,7 +27,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVk-yk-LBQ">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="669.5"/>
-                                                <mutableString key="text">Lorem ipsum dolor sit amet, putant recteque at sed. Sea ne alii accusata. Unum exerci aliquam pri an. Ferri audire ei eos, his ex idque voluptaria, eum ex justo definitiones. Altera nominavi eu nam, et mei nonumy erroribus persecuti, in per enim vitae propriae.
+                                                <string key="text">Lorem ipsum dolor sit amet, putant recteque at sed. Sea ne alii accusata. Unum exerci aliquam pri an. Ferri audire ei eos, his ex idque voluptaria, eum ex justo definitiones. Altera nominavi eu nam, et mei nonumy erroribus persecuti, in per enim vitae propriae.
 
 Meis doming his an, ex odio detracto assueverit mei, mutat labore pericula duo an. Quando argumentum nec ea, ne oblique albucius maluisset sit. At mel tincidunt comprehensam. No harum dicam omnium mel.
 
@@ -35,7 +35,7 @@ Vis case ignota vidisse id, sint consulatu elaboraret mel cu. Usu rebum harum er
 
 Usu ad primis reprimique, ea pro assum alterum adversarium. Ferri paulo graeco at sit, alterum adipiscing eam at. At etiam decore minimum vis. Ne mel sumo rebum conceptam, mei persius accusata ex.
 
-Odio integre quaerendum an vis, has viris mollis epicurei ei. Vim in eirmod ceteros, eos eu labores volumus expetendis, ullum zril te pro. Mazim dolor aliquid ius et. Diam ipsum legimus eu vel, equidem expetendis disputando et his. Eu case choro ius, id mel quas graeci suavitate. Per phaedrum consulatu ad, ea eos forensibus neglegentur.</mutableString>
+Odio integre quaerendum an vis, has viris mollis epicurei ei. Vim in eirmod ceteros, eos eu labores volumus expetendis, ullum zril te pro. Mazim dolor aliquid ius et. Diam ipsum legimus eu vel, equidem expetendis disputando et his. Eu case choro ius, id mel quas graeci suavitate. Per phaedrum consulatu ad, ea eos forensibus neglegentur.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -70,10 +70,10 @@ Odio integre quaerendum an vis, has viris mollis epicurei ei. Vim in eirmod cete
             </objects>
             <point key="canvasLocation" x="95" y="288"/>
         </scene>
-        <!--Item-->
+        <!--Photo Lists-->
         <scene sceneID="tEM-1g-8B3">
             <objects>
-                <collectionViewController id="fJ3-X3-XnB" customClass="PhotoCollectionViewController" customModule="JournalingApp" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController title="Photo Lists" id="fJ3-X3-XnB" customClass="PhotoCollectionViewController" customModule="JournalingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Gqv-ZY-KVH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -141,7 +141,10 @@ Odio integre quaerendum an vis, has viris mollis epicurei ei. Vim in eirmod cete
                             <outlet property="delegate" destination="fJ3-X3-XnB" id="cLN-ei-7pf"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Item" id="sV4-Qy-IAk"/>
+                    <tabBarItem key="tabBarItem" title="Photo" image="icons8-photo-gallery-52" id="sV4-Qy-IAk"/>
+                    <connections>
+                        <segue destination="t3b-Oh-k0s" kind="showDetail" identifier="photoToDetail" id="eDY-Mr-x9I"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9fL-Z1-wGX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -285,16 +288,14 @@ Odio integre quaerendum an vis, has viris mollis epicurei ei. Vim in eirmod cete
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="RSd-cE-pbe" firstAttribute="leading" secondItem="JoX-ny-Cbw" secondAttribute="leadingMargin" constant="283" id="0X8-1B-lPD"/>
                                         <constraint firstItem="2dH-9v-nea" firstAttribute="trailing" secondItem="JoX-ny-Cbw" secondAttribute="trailingMargin" id="6k6-dT-qRE"/>
-                                        <constraint firstItem="Itj-LY-A4I" firstAttribute="leading" secondItem="JoX-ny-Cbw" secondAttribute="leadingMargin" constant="311" id="Asv-xb-rUz"/>
                                         <constraint firstAttribute="bottom" secondItem="hw6-rW-IUL" secondAttribute="bottom" id="E6N-J0-keR"/>
                                         <constraint firstItem="RSd-cE-pbe" firstAttribute="top" secondItem="2dH-9v-nea" secondAttribute="bottom" id="GQ7-xZ-ES0"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="m5z-a0-h97" secondAttribute="bottom" id="HYp-dQ-pRf"/>
                                         <constraint firstItem="m5z-a0-h97" firstAttribute="leading" secondItem="hw6-rW-IUL" secondAttribute="trailing" constant="8" id="MGh-JP-Hzi"/>
                                         <constraint firstItem="m5z-a0-h97" firstAttribute="top" secondItem="JoX-ny-Cbw" secondAttribute="topMargin" id="MbM-v7-3Pu"/>
-                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="RSd-cE-pbe" secondAttribute="trailing" id="P9d-WY-f06"/>
-                                        <constraint firstItem="Itj-LY-A4I" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JoX-ny-Cbw" secondAttribute="trailingMargin" id="WyH-Ac-6IU"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="RSd-cE-pbe" secondAttribute="trailing" id="P9d-WY-f06"/>
+                                        <constraint firstItem="Itj-LY-A4I" firstAttribute="trailing" secondItem="JoX-ny-Cbw" secondAttribute="trailingMargin" id="WyH-Ac-6IU"/>
                                         <constraint firstItem="RSd-cE-pbe" firstAttribute="bottom" secondItem="JoX-ny-Cbw" secondAttribute="bottomMargin" id="X9m-cV-bul"/>
                                         <constraint firstItem="2dH-9v-nea" firstAttribute="top" secondItem="Itj-LY-A4I" secondAttribute="bottom" id="abI-XP-Der"/>
                                         <constraint firstItem="hw6-rW-IUL" firstAttribute="top" secondItem="JoX-ny-Cbw" secondAttribute="top" id="bGi-gd-7Kz"/>
@@ -318,7 +319,7 @@ Odio integre quaerendum an vis, has viris mollis epicurei ei. Vim in eirmod cete
                             <outlet property="delegate" destination="Gct-t6-n3N" id="4Eb-Jd-QF4"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="gIl-nJ-PEQ"/>
+                    <tabBarItem key="tabBarItem" title="List" image="icons8-database-60" id="gIl-nJ-PEQ"/>
                     <navigationItem key="navigationItem" title="Journal Lists" id="Iou-ug-QPs"/>
                     <connections>
                         <outlet property="cameraButton" destination="Ep7-zG-8e0" id="oIE-gv-ER5"/>
@@ -482,6 +483,8 @@ Odio integre quaerendum an vis, has viris mollis epicurei ei. Vim in eirmod cete
     <resources>
         <image name="add" width="512" height="512"/>
         <image name="calendar" width="512" height="512"/>
+        <image name="icons8-database-60" width="30" height="30"/>
+        <image name="icons8-photo-gallery-52" width="26" height="26"/>
         <image name="photo-camera" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>

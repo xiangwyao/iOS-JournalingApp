@@ -2,9 +2,7 @@ import UIKit
 import RealmSwift
 
 class PhotoCollectionViewController: UICollectionViewController {
-  
 
-  
   var pictures: Results<Picture>?
   
   override func viewDidLoad() {
@@ -24,18 +22,7 @@ class PhotoCollectionViewController: UICollectionViewController {
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
   }
-  
-  /*
-   // MARK: - Navigation
-   
-   // In a storyboard-based application, you will often want to do a little preparation before navigation
-   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-   // Get the new view controller using [segue destinationViewController].
-   // Pass the selected object to the new view controller.
-   }
-   */
   
   // MARK: UICollectionViewDataSource
   
@@ -58,15 +45,23 @@ class PhotoCollectionViewController: UICollectionViewController {
         cell.dayLabel.text = picture.entry?.dayString()
         cell.monthYearLabel.text = picture.entry?.monthYearString()
       }
+      return cell
     }
-    
-    
-    
-    // Configure the cell
-    
     return UICollectionViewCell()
   }
   
+  override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    performSegue(withIdentifier: "photoToDetail", sender: pictures?[indexPath.row].entry)
+  }
   
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "photoToDetail" {
+      if let entry = sender as? Entry {
+        if let dVC = segue.destination as? JournalDetailViewController {
+          dVC.entry = entry
+        }
+      }
+    }
+  }
   
 }

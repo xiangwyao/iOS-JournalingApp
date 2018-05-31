@@ -8,6 +8,7 @@ target 'JournalingApp' do
   # Pods for JournalingApp
   pod 'RealmSwift', '~> 3.4.0'
   pod 'Toucan', '~>1.0.0'
+  pod 'Spring', '~>1.0.5'
 
   target 'JournalingAppTests' do
     inherit! :search_paths
