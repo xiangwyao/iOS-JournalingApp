@@ -76,6 +76,12 @@ class JournalEntriesTableViewController: UITableViewController {
     return UITableViewCell()
   }
   
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    if let entry = entries?[indexPath.row] {
+      performSegue(withIdentifier: "tableToDetail", sender: entry)
+    }
+  }
+  
   override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 100.0
   }
@@ -124,6 +130,12 @@ class JournalEntriesTableViewController: UITableViewController {
         if text == "camera" {
           let dVC = segue.destination as? CreateJournalViewController
           dVC?.startWithCamera = true
+        }
+      }
+    } else if segue.identifier == "tableToDetail" {
+      if let entry = sender as? Entry {
+        if let dVC = segue.destination as? JournalDetailViewController {
+          dVC.entry = entry
         }
       }
     }

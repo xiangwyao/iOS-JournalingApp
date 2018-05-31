@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="drp-UC-JK6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="drp-UC-JK6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -18,9 +18,53 @@
                     <view key="view" contentMode="scaleToFill" id="tPx-Rc-ASQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B3n-xB-WOr">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9Hh-MS-mWh">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="669.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVk-yk-LBQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="669.5"/>
+                                                <mutableString key="text">Lorem ipsum dolor sit amet, putant recteque at sed. Sea ne alii accusata. Unum exerci aliquam pri an. Ferri audire ei eos, his ex idque voluptaria, eum ex justo definitiones. Altera nominavi eu nam, et mei nonumy erroribus persecuti, in per enim vitae propriae.
+
+Meis doming his an, ex odio detracto assueverit mei, mutat labore pericula duo an. Quando argumentum nec ea, ne oblique albucius maluisset sit. At mel tincidunt comprehensam. No harum dicam omnium mel.
+
+Vis case ignota vidisse id, sint consulatu elaboraret mel cu. Usu rebum harum eripuit ad. Ut eam erat voluptua, impedit fastidii consetetur in sit, has ut debet bonorum. At qui alii pertinax consectetuer. Eos id libris bonorum.
+
+Usu ad primis reprimique, ea pro assum alterum adversarium. Ferri paulo graeco at sit, alterum adipiscing eam at. At etiam decore minimum vis. Ne mel sumo rebum conceptam, mei persius accusata ex.
+
+Odio integre quaerendum an vis, has viris mollis epicurei ei. Vim in eirmod ceteros, eos eu labores volumus expetendis, ullum zril te pro. Mazim dolor aliquid ius et. Diam ipsum legimus eu vel, equidem expetendis disputando et his. Eu case choro ius, id mel quas graeci suavitate. Per phaedrum consulatu ad, ea eos forensibus neglegentur.</mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="9Hh-MS-mWh" firstAttribute="width" secondItem="B3n-xB-WOr" secondAttribute="width" id="J2b-vx-ZaH"/>
+                                    <constraint firstAttribute="bottom" secondItem="9Hh-MS-mWh" secondAttribute="bottom" id="Kgg-pW-Opc"/>
+                                    <constraint firstAttribute="trailing" secondItem="9Hh-MS-mWh" secondAttribute="trailing" id="UEe-bd-EZL"/>
+                                    <constraint firstItem="9Hh-MS-mWh" firstAttribute="leading" secondItem="B3n-xB-WOr" secondAttribute="leading" id="fwe-Vp-bVJ"/>
+                                    <constraint firstItem="9Hh-MS-mWh" firstAttribute="top" secondItem="B3n-xB-WOr" secondAttribute="top" id="nEo-Bo-bUt"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kE3-DM-Mbt" firstAttribute="bottom" secondItem="B3n-xB-WOr" secondAttribute="bottom" id="7LR-Or-fle"/>
+                            <constraint firstItem="B3n-xB-WOr" firstAttribute="leading" secondItem="kE3-DM-Mbt" secondAttribute="leading" id="pCF-21-3WE"/>
+                            <constraint firstItem="B3n-xB-WOr" firstAttribute="top" secondItem="kE3-DM-Mbt" secondAttribute="top" id="pdw-V3-Er6"/>
+                            <constraint firstItem="kE3-DM-Mbt" firstAttribute="trailing" secondItem="B3n-xB-WOr" secondAttribute="trailing" id="wvs-Z4-z1Y"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kE3-DM-Mbt"/>
                     </view>
+                    <connections>
+                        <outlet property="journalTextLabel" destination="dVk-yk-LBQ" id="TVU-GI-pdA"/>
+                        <outlet property="stackView" destination="9Hh-MS-mWh" id="FR8-iI-Y4q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nzv-ic-fSh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -35,19 +79,61 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="a2U-4m-Fry">
-                            <size key="itemSize" width="50" height="50"/>
+                            <size key="itemSize" width="182" height="181"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="pet-mE-yd9">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCell" id="pet-mE-yd9" customClass="PhotoCell" customModule="JournalingApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="182" height="181"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="182" height="181"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XNt-m0-ChF">
+                                            <rect key="frame" x="0.0" y="0.0" width="182" height="181"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAY 2018" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJx-8a-mJA">
+                                            <rect key="frame" x="8" y="152" width="166" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="COL-Mt-AXW"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4a-oW-U7z">
+                                            <rect key="frame" x="0.0" y="99" width="182" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="PQZ-IU-ocw"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </label>
+                                    </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="s4a-oW-U7z" secondAttribute="trailing" id="44h-WP-c9n"/>
+                                    <constraint firstAttribute="trailing" secondItem="XNt-m0-ChF" secondAttribute="trailing" id="4hF-Sz-fwn"/>
+                                    <constraint firstItem="s4a-oW-U7z" firstAttribute="leading" secondItem="pet-mE-yd9" secondAttribute="leading" id="9Nt-8K-QbQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="XNt-m0-ChF" secondAttribute="bottom" id="N1G-W8-EnK"/>
+                                    <constraint firstItem="XNt-m0-ChF" firstAttribute="leading" secondItem="pet-mE-yd9" secondAttribute="leading" id="WTZ-kW-HU6"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="WJx-8a-mJA" secondAttribute="trailing" id="ec4-Do-Nsj"/>
+                                    <constraint firstItem="WJx-8a-mJA" firstAttribute="top" secondItem="s4a-oW-U7z" secondAttribute="bottom" constant="3" id="res-VZ-9mU"/>
+                                    <constraint firstItem="XNt-m0-ChF" firstAttribute="top" secondItem="pet-mE-yd9" secondAttribute="top" id="sW6-Uy-Pa8"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="WJx-8a-mJA" secondAttribute="bottom" id="uTK-L4-ngG"/>
+                                    <constraint firstItem="WJx-8a-mJA" firstAttribute="leading" secondItem="pet-mE-yd9" secondAttribute="leadingMargin" id="yWV-cT-Hmk"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dayLabel" destination="s4a-oW-U7z" id="fWP-Ez-d44"/>
+                                    <outlet property="monthYearLabel" destination="WJx-8a-mJA" id="mRG-Tv-UY1"/>
+                                    <outlet property="previewImageView" destination="XNt-m0-ChF" id="oon-1A-sTN"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -184,7 +270,7 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5z-a0-h97">
                                             <rect key="frame" x="107.5" y="11" width="191.5" height="78"/>
-                                            <mutableString key="text">Lorem ipsum dolor sit amet, putant recteque at sed. Sea ne alii accusata. Unum exerci aliquam pri an. Ferri audire ei eos, his ex idque voluptaria, eum ex justo definitiones. Altera nominavi eu nam, et mei nonumy erroribus persecuti, in per enim vitae propriae.
+                                            <string key="text">Lorem ipsum dolor sit amet, putant recteque at sed. Sea ne alii accusata. Unum exerci aliquam pri an. Ferri audire ei eos, his ex idque voluptaria, eum ex justo definitiones. Altera nominavi eu nam, et mei nonumy erroribus persecuti, in per enim vitae propriae.
 
 Meis doming his an, ex odio detracto assueverit mei, mutat labore pericula duo an. Quando argumentum nec ea, ne oblique albucius maluisset sit. At mel tincidunt comprehensam. No harum dicam omnium mel.
 
@@ -192,7 +278,7 @@ Vis case ignota vidisse id, sint consulatu elaboraret mel cu. Usu rebum harum er
 
 Usu ad primis reprimique, ea pro assum alterum adversarium. Ferri paulo graeco at sit, alterum adipiscing eam at. At etiam decore minimum vis. Ne mel sumo rebum conceptam, mei persius accusata ex.
 
-Odio integre quaerendum an vis, has viris mollis epicurei ei. Vim in eirmod ceteros, eos eu labores volumus expetendis, ullum zril te pro. Mazim dolor aliquid ius et. Diam ipsum legimus eu vel, equidem expetendis disputando et his. Eu case choro ius, id mel quas graeci suavitate. Per phaedrum consulatu ad, ea eos forensibus neglegentur.</mutableString>
+Odio integre quaerendum an vis, has viris mollis epicurei ei. Vim in eirmod ceteros, eos eu labores volumus expetendis, ullum zril te pro. Mazim dolor aliquid ius et. Diam ipsum legimus eu vel, equidem expetendis disputando et his. Eu case choro ius, id mel quas graeci suavitate. Per phaedrum consulatu ad, ea eos forensibus neglegentur.</string>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -239,6 +325,7 @@ Odio integre quaerendum an vis, has viris mollis epicurei ei. Vim in eirmod cete
                         <outlet property="plusButton" destination="p3z-Lm-TvA" id="pdf-nu-NNQ"/>
                         <outlet property="topHeaderView" destination="EWH-Qu-vAm" id="dDE-kF-0IR"/>
                         <segue destination="s2l-SW-4Ce" kind="presentation" identifier="goToNew" id="ZUP-nU-EUi"/>
+                        <segue destination="t3b-Oh-k0s" kind="showDetail" identifier="tableToDetail" id="xDh-gG-NwU"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f7x-iE-dah" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -397,4 +484,7 @@ Odio integre quaerendum an vis, has viris mollis epicurei ei. Vim in eirmod cete
         <image name="calendar" width="512" height="512"/>
         <image name="photo-camera" width="512" height="512"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="xDh-gG-NwU"/>
+    </inferredMetricsTieBreakers>
 </document>

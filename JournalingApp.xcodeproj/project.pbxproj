@@ -24,6 +24,7 @@
 		D3D393A820BD510400B3F7B9 /* JournalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D393A720BD510400B3F7B9 /* JournalCell.swift */; };
 		D3D393AA20BD5A9500B3F7B9 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D393A920BD5A9500B3F7B9 /* SplitViewController.swift */; };
 		D3D393AC20BD5B3E00B3F7B9 /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D393AB20BD5B3E00B3F7B9 /* Picture.swift */; };
+		D3D393AE20BE3EF800B3F7B9 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D393AD20BE3EF800B3F7B9 /* PhotoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		D3D393A720BD510400B3F7B9 /* JournalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalCell.swift; sourceTree = "<group>"; };
 		D3D393A920BD5A9500B3F7B9 /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		D3D393AB20BD5B3E00B3F7B9 /* Picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
+		D3D393AD20BE3EF800B3F7B9 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		DAA614118757EB502F737E7E /* Pods-JournalingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JournalingApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JournalingApp/Pods-JournalingApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,6 +165,7 @@
 				D397EA6720BD24A8007B55C2 /* JournalEntriesTableViewController.swift */,
 				D397EA4020BD22A9007B55C2 /* LaunchScreen.storyboard */,
 				D397EA3B20BD22A7007B55C2 /* Main.storyboard */,
+				D3D393AD20BE3EF800B3F7B9 /* PhotoCell.swift */,
 				D397EA6B20BD24E0007B55C2 /* PhotoCollectionViewController.swift */,
 				D3D393A920BD5A9500B3F7B9 /* SplitViewController.swift */,
 			);
@@ -416,6 +419,7 @@
 				D397EA6820BD24A8007B55C2 /* JournalEntriesTableViewController.swift in Sources */,
 				D3D393A620BD454E00B3F7B9 /* Entry.swift in Sources */,
 				D397EA6A20BD24CF007B55C2 /* CreateJournalViewController.swift in Sources */,
+				D3D393AE20BE3EF800B3F7B9 /* PhotoCell.swift in Sources */,
 				D3D393A820BD510400B3F7B9 /* JournalCell.swift in Sources */,
 				D397EA6620BD246A007B55C2 /* JournalDetailViewController.swift in Sources */,
 				D3D393AA20BD5A9500B3F7B9 /* SplitViewController.swift in Sources */,
