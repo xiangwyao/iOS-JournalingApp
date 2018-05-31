@@ -1,4 +1,12 @@
-#  Visuals
-Added some additional background colors to have a better visuals of the views layout
+#  Screenshots
+Some screenshots of the app
 
-![datePickerView](/Users/learn/Desktop/JournalingApp/screenshots/datePickerView.png)
+![list](screenshots/list.png)
+
+![detailEntry](screenshots/detailEntry.png)
+
+![datePickerView](screenshots/datePickerView.png)
+
+
+
+
